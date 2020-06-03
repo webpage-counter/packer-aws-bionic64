@@ -12,7 +12,7 @@ provisioner:
 platforms:
   - name: ubuntu
     driver: 
-      image_id: ami-0230ee9fd9ee23718
+      image_id: ami-0ae16567e95c768a1
       region: us-east-1
 
 verifier:

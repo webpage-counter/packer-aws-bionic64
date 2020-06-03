@@ -22,6 +22,24 @@ describe command('which docker') do
   its('exit_status') { should eq 0 }
 end
 
+describe command('nomad version') do
+  its('stdout') { should include "v0.11.1" }
+  its('stderr') { should eq '' }
+  its('exit_status') { should eq 0 }
+end
+
+describe command('vault version') do
+  its('stdout') { should include "v1.4.0" }
+  its('stderr') { should eq '' }
+  its('exit_status') { should eq 0 }
+end
+
+describe command('consul version') do
+  its('stdout') { should include "v1.7.2" }
+  its('stderr') { should eq '' }
+  its('exit_status') { should eq 0 }
+end
+
 describe systemd_service('docker') do
   it { should be_installed }
   it { should be_enabled }
